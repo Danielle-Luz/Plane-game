@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
-@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var _animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var _animation_player: AnimationPlayer = $AnimationPlayer
 
 const _SPEED = 500
 const _FLY_SPEED = -300
@@ -17,8 +18,9 @@ func _physics_process(delta: float) -> void:
 	
 func fly() -> void:
 	if(Input.is_action_just_pressed("ui_up")):
+		self._animation_player.play("Fly up")
 		self.velocity.y = self._FLY_SPEED
 
 func die() -> void:
 	self.set_physics_process(false)
-	animated_sprite_2d.stop()
+	self._animated_sprite_2d.stop()
