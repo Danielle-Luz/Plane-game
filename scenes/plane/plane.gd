@@ -1,9 +1,14 @@
 extends CharacterBody2D
 
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+
 const _SPEED = 500
 const _FLY_SPEED = -300
 
 func _physics_process(delta: float) -> void:
+	if(self.is_on_ceiling() || self.is_on_floor()):
+		self.die()
+	
 	self.velocity.y += self._SPEED * delta
 	
 	self.fly()
@@ -13,3 +18,7 @@ func _physics_process(delta: float) -> void:
 func fly() -> void:
 	if(Input.is_action_just_pressed("ui_up")):
 		self.velocity.y = self._FLY_SPEED
+
+func die() -> void:
+	self.set_physics_process(false)
+	animated_sprite_2d.stop()
