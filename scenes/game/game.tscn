@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://hj36y2hq3owk"]
 
 [ext_resource type="Texture2D" uid="uid://c7lnkjjvfrpcg" path="res://assets/background/rocks_2.png" id="1_sl8j4"]
-[ext_resource type="PackedScene" uid="uid://dmyhjqfsf1vq4" path="res://scenes/game/plane.tscn" id="2_gejbe"]
+[ext_resource type="PackedScene" uid="uid://dmyhjqfsf1vq4" path="res://scenes/plane/plane.tscn" id="2_gejbe"]
 
 [node name="Game" type="Node2D"]
 

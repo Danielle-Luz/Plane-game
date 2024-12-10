@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://dmyhjqfsf1vq4"]
+[gd_scene load_steps=8 format=3 uid="uid://dmyhjqfsf1vq4"]
 
+[ext_resource type="Script" path="res://scenes/plane/plane.gd" id="1_7pcjr"]
 [ext_resource type="Texture2D" uid="uid://depqpcuh5vevt" path="res://assets/plane/planes_sheet.png" id="1_g2558"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ukcdq"]
@@ -31,11 +32,12 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qcssf"]
-size = Vector2(64, 60)
+[sub_resource type="CircleShape2D" id="CircleShape2D_3flkv"]
+radius = 32.8261
 
 [node name="Plane" type="CharacterBody2D"]
 scale = Vector2(0.75, 0.75)
+script = ExtResource("1_7pcjr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(48, 38)
@@ -46,5 +48,5 @@ frame = 2
 frame_progress = 0.375229
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(55, 33)
-shape = SubResource("RectangleShape2D_qcssf")
+position = Vector2(53.3333, 34.6667)
+shape = SubResource("CircleShape2D_3flkv")
