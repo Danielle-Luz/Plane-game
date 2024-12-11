@@ -14,6 +14,7 @@ func _process(delta: float) -> void:
 	pass
 
 func on_laser_surpassed(body: Node2D) -> void:
-	ScoreAutoload.increment_score()
-	self._score_sound.position = self.position
-	self._score_sound.play()
+	if(is_instance_of(body, FlyingPlane)):
+		ScoreAutoload.increment_score()
+		self._score_sound.position = self.position
+		self._score_sound.play()
