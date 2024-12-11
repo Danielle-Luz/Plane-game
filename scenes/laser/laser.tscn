@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bd44qinat6jy1"]
+[gd_scene load_steps=8 format=3 uid="uid://bd44qinat6jy1"]
 
 [ext_resource type="Script" path="res://scenes/laser/laser.gd" id="1_awys5"]
 [ext_resource type="Texture2D" uid="uid://bsqiaore06j3t" path="res://assets/pipes/laser2.png" id="1_plfc8"]
+[ext_resource type="AudioStream" uid="uid://c25sqhg4b6ub7" path="res://assets/audio/score.wav" id="3_t60l1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f8lc3"]
 size = Vector2(7, 32.6809)
@@ -63,3 +64,8 @@ libraries = {
 "": SubResource("AnimationLibrary_lxfkp")
 }
 autoplay = "Laser hit"
+
+[node name="ScoreSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_t60l1")
+
+[connection signal="body_entered" from="." to="." method="on_laser_surpassed"]

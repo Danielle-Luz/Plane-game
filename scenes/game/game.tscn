@@ -13,10 +13,10 @@ position = Vector2(342, 319)
 texture = ExtResource("1_sl8j4")
 
 [node name="Upper boundary" parent="." instance=ExtResource("3_sl7qy")]
-position = Vector2(0, -21)
+position = Vector2(0, -75)
 
 [node name="Lower boundary" parent="." instance=ExtResource("3_sl7qy")]
-position = Vector2(1, 856)
+position = Vector2(1, 904)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 1.5

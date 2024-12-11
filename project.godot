@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 GameAutoload="*res://autoload/game_autoload.gd"
 SignalsAutoload="*res://autoload/signals_autoload.gd"
+ScoreAutoload="*res://autoload/score_autoload.gd"
 
 [display]
 
