@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://b7g2obnvr3rkp"]
+[gd_scene load_steps=9 format=3 uid="uid://b7g2obnvr3rkp"]
 
+[ext_resource type="Script" path="res://scenes/game over/game_over.gd" id="1_cppim"]
 [ext_resource type="FontFile" uid="uid://m23x42o1kn10" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="1_h6wjw"]
 [ext_resource type="LabelSettings" uid="uid://bnajqbpgiq5oq" path="res://scenes/texts/title_white.tres" id="2_1q35f"]
 [ext_resource type="AudioStream" uid="uid://braqf2h5gdkqi" path="res://assets/audio/game_over.wav" id="3_8taho"]
@@ -79,6 +80,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_cppim")
 
 [node name="GameOverLabel" type="Label" parent="."]
 layout_mode = 1

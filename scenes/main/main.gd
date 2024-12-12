@@ -9,4 +9,4 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	var was_space_pressed: bool = Input.is_action_just_pressed("ui_accept")
 	if(was_space_pressed):
-		GameAutoload.change_scene()
+		GameAutoload.go_to_game_scene()
