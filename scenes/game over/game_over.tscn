@@ -123,7 +123,7 @@ libraries = {
 }
 autoplay = "hide_text"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="LossSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_8taho")
 volume_db = -30.0
 autoplay = true
