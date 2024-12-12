@@ -1,16 +1,17 @@
-[gd_scene load_steps=9 format=3 uid="uid://b7g2obnvr3rkp"]
+[gd_scene load_steps=10 format=3 uid="uid://b7g2obnvr3rkp"]
 
 [ext_resource type="Script" path="res://scenes/game over/game_over.gd" id="1_cppim"]
 [ext_resource type="FontFile" uid="uid://m23x42o1kn10" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="1_h6wjw"]
 [ext_resource type="LabelSettings" uid="uid://bnajqbpgiq5oq" path="res://scenes/texts/title_white.tres" id="2_1q35f"]
 [ext_resource type="AudioStream" uid="uid://braqf2h5gdkqi" path="res://assets/audio/game_over.wav" id="3_8taho"]
 
+[sub_resource type="CanvasTexture" id="CanvasTexture_6awif"]
+
 [sub_resource type="LabelSettings" id="LabelSettings_s1d8b"]
 font = ExtResource("1_h6wjw")
 font_size = 50
 font_color = Color(1, 0.301961, 0.501961, 1)
 outline_size = 4
-outline_color = Color(0.219465, 0.452552, 0.695684, 1)
 
 [sub_resource type="Animation" id="Animation_uxpmc"]
 resource_name = "hide_text"
@@ -82,6 +83,16 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_cppim")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.407843)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_6awif")
+
 [node name="GameOverLabel" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 14
@@ -110,14 +121,6 @@ text = "Press space"
 label_settings = ExtResource("2_1q35f")
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
