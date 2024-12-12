@@ -1,12 +1,50 @@
-[gd_scene format=3 uid="uid://dots4mgjd0ekn"]
+[gd_scene load_steps=7 format=3 uid="uid://dots4mgjd0ekn"]
+
+[ext_resource type="Texture2D" uid="uid://bisdcv0d8xblo" path="res://assets/background/sky.png" id="1_58geb"]
+[ext_resource type="LabelSettings" uid="uid://bk3scfltxyl0g" path="res://scenes/texts/title.tres" id="2_44m86"]
+[ext_resource type="FontFile" uid="uid://m23x42o1kn10" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="3_gu0xl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_m4yyi"]
+font = ExtResource("3_gu0xl")
+font_size = 36
+outline_color = Color(0.219465, 0.452552, 0.695684, 1)
+shadow_size = 5
+shadow_color = Color(0.219608, 0.45098, 0.694118, 1)
+shadow_offset = Vector2(2, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_cds6g"]
+font = ExtResource("3_gu0xl")
+font_size = 24
+font_color = Color(1, 0.301961, 0.501961, 1)
+outline_size = 1
+outline_color = Color(0.219465, 0.452552, 0.695684, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_bhr8a"]
+font = ExtResource("3_gu0xl")
+font_size = 24
+font_color = Color(1, 0.301961, 0.501961, 1)
+outline_size = 1
+outline_color = Color(0.219465, 0.452552, 0.695684, 1)
 
 [node name="Main" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_58geb")
+expand_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -15,6 +53,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(24, 0)
 theme_override_constants/margin_left = 24
 theme_override_constants/margin_top = 24
 theme_override_constants/margin_right = 24
@@ -25,21 +64,27 @@ layout_mode = 2
 size_flags_vertical = 0
 text = "TAPPY 
 PLANE"
+label_settings = ExtResource("2_44m86")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="PressSpaceLabel" type="Label" parent="MarginContainer"]
 layout_mode = 2
-text = "PRESS SPACE TO PLAY"
+text = "PRESS SPACE 
+TO 
+PLAY"
+label_settings = SubResource("LabelSettings_m4yyi")
 horizontal_alignment = 1
 
 [node name="HighscoreLabel" type="Label" parent="MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 8
 text = "Highscore"
+label_settings = SubResource("LabelSettings_cds6g")
 
 [node name="HighscoreValueLabel" type="Label" parent="MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
 text = "0000"
+label_settings = SubResource("LabelSettings_bhr8a")
