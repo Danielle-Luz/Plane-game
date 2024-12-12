@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dots4mgjd0ekn"]
+[gd_scene load_steps=9 format=3 uid="uid://dots4mgjd0ekn"]
 
 [ext_resource type="Texture2D" uid="uid://bisdcv0d8xblo" path="res://assets/background/sky.png" id="1_58geb"]
+[ext_resource type="Script" path="res://scenes/main/main.gd" id="1_obtks"]
 [ext_resource type="LabelSettings" uid="uid://bk3scfltxyl0g" path="res://scenes/texts/title.tres" id="2_44m86"]
 [ext_resource type="FontFile" uid="uid://m23x42o1kn10" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="3_gu0xl"]
+[ext_resource type="AudioStream" uid="uid://hthd3dpxuv12" path="res://assets/audio/bgm_menu.mp3" id="5_bop80"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_m4yyi"]
 font = ExtResource("3_gu0xl")
@@ -35,6 +37,7 @@ offset_left = 1.0
 offset_top = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_obtks")
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
@@ -88,3 +91,8 @@ size_flags_horizontal = 8
 size_flags_vertical = 8
 text = "0000"
 label_settings = SubResource("LabelSettings_bhr8a")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_bop80")
+volume_db = -30.0
+autoplay = true
