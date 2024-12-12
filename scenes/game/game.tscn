@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://hj36y2hq3owk"]
+[gd_scene load_steps=6 format=3 uid="uid://hj36y2hq3owk"]
 
 [ext_resource type="Script" path="res://scenes/game/game.gd" id="1_gocd4"]
 [ext_resource type="Texture2D" uid="uid://c7lnkjjvfrpcg" path="res://assets/background/rocks_2.png" id="1_sl8j4"]
 [ext_resource type="PackedScene" uid="uid://dmyhjqfsf1vq4" path="res://scenes/plane/plane.tscn" id="2_gejbe"]
 [ext_resource type="PackedScene" uid="uid://dlo2vhpicxg3g" path="res://scenes/boundary/boundary.tscn" id="3_sl7qy"]
+[ext_resource type="PackedScene" uid="uid://b7g2obnvr3rkp" path="res://scenes/game over/game_over.tscn" id="5_jcyqv"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_gocd4")
@@ -24,5 +25,10 @@ autostart = true
 
 [node name="Plane" parent="." instance=ExtResource("2_gejbe")]
 position = Vector2(3, 364)
+
+[node name="EndGameCanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Game over" parent="EndGameCanvasLayer" instance=ExtResource("5_jcyqv")]
 
 [connection signal="timeout" from="Timer" to="." method="on_timer_timeout"]

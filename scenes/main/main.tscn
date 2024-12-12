@@ -4,16 +4,8 @@
 [ext_resource type="Script" path="res://scenes/main/main.gd" id="1_obtks"]
 [ext_resource type="LabelSettings" uid="uid://bk3scfltxyl0g" path="res://scenes/texts/title.tres" id="2_44m86"]
 [ext_resource type="FontFile" uid="uid://m23x42o1kn10" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="3_gu0xl"]
+[ext_resource type="LabelSettings" uid="uid://bnajqbpgiq5oq" path="res://scenes/texts/title_white.tres" id="4_xa2gl"]
 [ext_resource type="AudioStream" uid="uid://hthd3dpxuv12" path="res://assets/audio/bgm_menu.mp3" id="5_bop80"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_vwihq"]
-font = ExtResource("3_gu0xl")
-font_size = 40
-outline_size = 4
-outline_color = Color(0.219465, 0.452552, 0.695684, 1)
-shadow_size = 10
-shadow_color = Color(0.219608, 0.45098, 0.694118, 1)
-shadow_offset = Vector2(2, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_cds6g"]
 font = ExtResource("3_gu0xl")
@@ -115,7 +107,7 @@ layout_mode = 2
 text = "PRESS SPACE 
 TO 
 PLAY"
-label_settings = SubResource("LabelSettings_vwihq")
+label_settings = ExtResource("4_xa2gl")
 horizontal_alignment = 1
 
 [node name="HighscoreLabel" type="Label" parent="MarginContainer"]
