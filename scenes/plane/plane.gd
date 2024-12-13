@@ -10,6 +10,7 @@ const _FLY_SPEED = -300
 
 func _ready() -> void:
 	SignalsAutoload.game_ended.connect(self.die)
+	Input.action_press("ui_up")
 
 func _physics_process(delta: float) -> void:
 	if(self.is_on_ceiling() || self.is_on_floor()):
