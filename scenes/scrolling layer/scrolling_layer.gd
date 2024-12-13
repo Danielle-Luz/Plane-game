@@ -13,4 +13,3 @@ func _ready() -> void:
 	
 	var new_sprite_width: float = self._sprite_2d.texture.get_width()
 	self.motion_mirroring.x = new_sprite_width * viewport_percentage_from_sprite
-	print(self.motion_mirroring.x)
