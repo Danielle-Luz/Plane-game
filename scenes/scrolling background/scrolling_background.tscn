@@ -1,0 +1,41 @@
+[gd_scene load_steps=10 format=3 uid="uid://jlc5bcwi14k5"]
+
+[ext_resource type="PackedScene" uid="uid://d05dd3se5gshg" path="res://scenes/scrolling layer/scrolling_layer.tscn" id="1_85q7j"]
+[ext_resource type="Script" path="res://scenes/scrolling background/scrolling_background.gd" id="1_wbg34"]
+[ext_resource type="Texture2D" uid="uid://bisdcv0d8xblo" path="res://assets/background/sky.png" id="2_0uai5"]
+[ext_resource type="Texture2D" uid="uid://c7lnkjjvfrpcg" path="res://assets/background/rocks_2.png" id="3_ql42r"]
+[ext_resource type="Texture2D" uid="uid://ba71sfcd6rjnk" path="res://assets/background/rocks_1.png" id="4_d6pcy"]
+[ext_resource type="Texture2D" uid="uid://yduphoxwu7ws" path="res://assets/background/clouds_1.png" id="5_qp7dx"]
+[ext_resource type="Texture2D" uid="uid://b6tir6ccod8wd" path="res://assets/background/clouds_2.png" id="6_5j017"]
+[ext_resource type="Texture2D" uid="uid://dhdou7ndemamw" path="res://assets/background/clouds_3.png" id="7_r2yq1"]
+[ext_resource type="Texture2D" uid="uid://dqi0pcevlh13w" path="res://assets/background/clouds_4.png" id="8_5m3fs"]
+
+[node name="ScrollingBackground" type="ParallaxBackground"]
+script = ExtResource("1_wbg34")
+
+[node name="SkyScrollingLayer" parent="." instance=ExtResource("1_85q7j")]
+_sprite_image = ExtResource("2_0uai5")
+
+[node name="RocksScrollingLayer2" parent="." instance=ExtResource("1_85q7j")]
+_sprite_image = ExtResource("4_d6pcy")
+_scrolling_speed = 0.5
+
+[node name="RocksScrollingLayer1" parent="." instance=ExtResource("1_85q7j")]
+_sprite_image = ExtResource("3_ql42r")
+_scrolling_speed = 0.75
+
+[node name="CloudScrollingLayer1" parent="." instance=ExtResource("1_85q7j")]
+_sprite_image = ExtResource("5_qp7dx")
+_scrolling_speed = 0.4
+
+[node name="CloudScrollingLayer2" parent="." instance=ExtResource("1_85q7j")]
+_sprite_image = ExtResource("6_5j017")
+_scrolling_speed = 0.3
+
+[node name="CloudScrollingLayer3" parent="." instance=ExtResource("1_85q7j")]
+_sprite_image = ExtResource("7_r2yq1")
+_scrolling_speed = 0.25
+
+[node name="CloudScrollingLayer4" parent="." instance=ExtResource("1_85q7j")]
+_sprite_image = ExtResource("8_5m3fs")
+_scrolling_speed = 0.35
